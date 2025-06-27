@@ -157,3 +157,53 @@ h5.name {
   font-size: 8px;
   margin-top: 15px;
 }
+
+@media screen and (max-width: 500px) {
+
+  body{
+    background-color: #121321;
+  }
+  
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #121321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  perspective: 1000px;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  transform: translate(-150px, -100px);
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  transform: translate(150px, 100px);
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+
+}
+
+.container {
+  position: relative;
+  height: 255px;
+  width: 355px;
+  z-index: 100;
+  transition: 0.9s;
+  transform-style: preserve-3d;
+}
+ 
+}
